@@ -1,0 +1,164 @@
+/* ==== GENERAL RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== BASE STYLES ==== */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+  padding: 0;
+  margin: 0;
+}
+
+/* Support Arabic text direction */
+html[lang="ar"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ==== HEADER ==== */
+header {
+  background: linear-gradient(135deg, #003366, #0066cc);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ==== NAVIGATION ==== */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  background: #004a99;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  background: #0073e6;
+}
+
+/* ==== MAIN CONTENT ==== */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2, h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* ==== IMAGES & FIGURES ==== */
+figure {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* ==== TABLE ==== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+th {
+  background: #e8f1fb;
+  color: #003366;
+}
+
+/* ==== ASIDE ==== */
+aside {
+  background: #f0f4ff;
+  border-left: 4px solid #003366;
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  font-size: 0.95rem;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: #003366;
+  color: #000000; /* main footer text in black */
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffcc00; /* links in yellow */
+  text-decoration: underline;
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    margin: 1rem;
+  }
+}

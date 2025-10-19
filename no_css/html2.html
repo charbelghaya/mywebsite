@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML 2.0 — History, Features, and Examples</title>
+  <meta name="description" content="A concise, detailed overview of HTML 2.0 (RFC 1866): history, main features, extensions, and a comparison table.">
+  <meta name="author" content="Charbel Ghaya (with AI assistance)">
+</head>
+<body>
+  <header>
+    <h1>HTML 2.0 — History, Features, and Examples</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="history.html">History of the Web &amp; Browsers</a></li>
+        <li><a href="security.html">Security on the Web / Internet</a></li>
+        <li><a href="mobile-first.html">Mobile-First Development</a></li>
+        <li><a href="stats.html">Internet Stats (Middle East &amp; Lebanon)</a></li>
+        <li><a href="html2.html">Html2.0 — History, Features, and Examples</a></li>
+        <li><a href="css.html">Css meaning,importance,rules</a></li>
+        <li><a href="java.html">Javascript: everything you need to know </a></li>
+        <li><a href="electric-cars.html">السيارات الكهربائية</a></li>        
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          HTML 2.0 was the first formal, published specification for HTML, standardized to replace earlier informal versions and to provide a stable baseline for authors and implementers. It was published as <strong>RFC 1866</strong> in November 1995 and collected the commonly-implemented features of HTML at that time. The standard clarified syntax, document structure, and the set of tags and attributes supported by most browsers of the era.
+        </p>
+      </section>
+
+      <figure>
+        <img src="https://miro.medium.com/v2/resize:fit:1200/0*PIZnLjKCIiOh8aEj.jpg"
+             alt="A vintage-style collage illustrating early web pages and HTML history"
+             width="640">
+        <figcaption>Illustration: historical web pages (image source supplied by the user).</figcaption>
+      </figure>
+
+      <section>
+        <h2>Why HTML 2.0 mattered</h2>
+        <p>
+          Before HTML 2.0 there were multiple, incompatible de-facto versions of HTML produced by browsers and authors. HTML 2.0 provided a single reference baseline so that authors could write documents that interoperated across different implementations and browsers. This helped the Web grow more predictably and allowed tool and browser authors to converge on a common feature set.
+        </p>
+      </section>
+
+      <section>
+        <h2>Core features & capabilities (summary)</h2>
+        <p>HTML 2.0 formalized many elements and behaviors that were already in wide use. Key capabilities included:</p>
+        <ul>
+          <li>Document structure elements: <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, and the DOCTYPE declaration to identify the HTML version.</li>
+          <li>Text structuring tags: headings, paragraphs, lists (<code>&lt;h1&gt;–&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>).</li>
+          <li>Inline text semantics: <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;a&gt;</code> for hyperlinks.</li>
+          <li>Forms (basic form controls) and related submission rules (RFC 1867 added form-based file upload as a supplement soon after).</li>
+          <li>Images (<code>&lt;img&gt;</code>) and basic support for inline graphics and image maps (client-side image maps were standardized later).</li>
+          <li>Tables (support for <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>) were introduced via supplemental RFCs; they were not part of the earliest drafts but became part of the extended feature set quickly after publication.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>HTML 2.0 elements and examples</h2>
+
+        <p>Below is a short illustrative snippet showing a valid HTML 2.0–style page skeleton and a basic form (note: modern HTML uses different conventions and many additional features):</p>
+
+        <pre>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Example (HTML 2.0)&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello — HTML 2.0&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+    &lt;form method=&quot;post&quot; action=&quot;/submit&quot;&gt;
+      &lt;label&gt;Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;&lt;/label&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;Send&quot;&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+      </section>
+
+      <section>
+        <h2>Comparison table — HTML 2.0 at a glance</h2>
+
+        <table border="1">
+          <caption>HTML 2.0: features, intent, and later extensions</caption>
+          <thead>
+            <tr>
+              <th scope="col">Aspect</th>
+              <th scope="col">HTML 2.0 (RFC 1866)</th>
+              <th scope="col">Notes / Later changes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Publication</th>
+              <td>Published as <strong>RFC 1866</strong> — November 1995</td>
+              <td>Provided the first formal standard baseline for HTML. Later superseded by HTML 3.x / 4.x and eventually HTML5.</td>
+            </tr>
+            <tr>
+              <th scope="row">Basic markup</th>
+              <td>Headings, paragraphs, lists, anchors, emphasis, images</td>
+              <td>Core semantics that remain part of HTML today.</td>
+            </tr>
+            <tr>
+              <th scope="row">Forms</th>
+              <td>Basic controls (<code>input</code>, <code>textarea</code>, <code>select</code>) standardized; form file-upload defined in supplemental RFC 1867.</td>
+              <td>Form capabilities were extended in subsequent RFCs and W3C specs.</td>
+            </tr>
+            <tr>
+              <th scope="row">Tables &amp; Graphics</th>
+              <td>Table support and client-side image maps arrived via supplemental documents (mid-1990s).</td>
+              <td>Tables became essential for layout (historically) and later for tabular data; modern HTML encourages CSS for layout.</td>
+            </tr>
+            <tr>
+              <th scope="row">Scope &amp; intent</th>
+              <td>Provide a stable, minimal baseline for interoperable documents across browsers and platforms</td>
+              <td>Allowed the Web to scale by reducing fragmentation between implementations.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Limitations &amp; succession</h2>
+        <p>
+          HTML 2.0 intentionally limited itself to common, well-implemented features. Rapid innovation from browser vendors and author needs led to quick extensions and new versions (HTML 3.2, HTML 4.0, XHTML, and eventually HTML5). Authors today should consult modern specifications (WHATWG Living Standard / W3C HTML snapshots) for current practice.
+        </p>
+      </section>
+
+      <section style="margin-top:30px;">
+        <h2>Is HTML 5.2 the last version of HTML?</h2>
+        <p>
+          HTML 5.2 is currently the latest formal recommendation published by W3C. However, HTML itself is now a "living standard" maintained by WHATWG, meaning it is continuously updated and improved. So, technically, there is no fixed "last version" of HTML; the specification evolves over time to include new features, fixes, and clarifications.
+        </p>
+      </section>
+
+      <aside aria-label="Content disclosure" role="note">
+        <p>
+          <strong>Disclosure:</strong> Content was created using multiple AI tools and edited by a human.
+          I corrected some items, but please read carefully and check sources on the
+          <a href="references.html">References page</a>.
+        </p>
+      </aside>
+
+    </article>
+  </main>
+
+  <footer style="text-align:center; margin-top:2rem;">
+  <a href="../welcome/index.html" style="text-decoration:none; color:#0066cc; font-weight:bold;">
+    🔙 Back to Welcome Page
+  </a>
+</footer>
+
+  <footer>
+    <p>Last updated: 22 September 2025</p>
+  </footer>
+  <footer style="text-align: center; padding: 20px; background-color: #f2f2f2; font-size: 14px;">
+    &copy; 2025 Charbel Ghaya. All rights reserved.
+  </footer>
+
+</body>
+</html>
