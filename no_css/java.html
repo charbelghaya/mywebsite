@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JavaScript Overview & Key Questions</title>
+  <meta name="description" content="Intro to JavaScript and answers to common questions.">
+  <meta name="author" content="Charbel Ghaya (with AI assistance)">
+</head>
+<body>
+  <header>
+    <h1>JavaScript Overview & Answers</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html" aria-current="page">Home</a></li>
+        <li><a href="history.html">History of the Web &amp; Browsers</a></li>
+        <li><a href="security.html">Security on the Web / Internet</a></li>
+        <li><a href="mobile-first.html">Mobile-First Development</a></li>
+        <li><a href="stats.html">Internet Stats (Middle East &amp; Lebanon)</a></li>
+        <li><a href="html2.html">Html2.0 — History, Features, and Examples</a></li>
+        <li><a href="css.html">Css meaning, importance, rules</a></li>
+        <li><a href="java.html">Javascript: everything you need to know</a></li>
+        <li><a href="electric-cars.html">السيارات الكهربائية</a></li>        
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Introduction to JavaScript</h2>
+
+      <figure>
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"
+          alt="JavaScript Logo" width="200">
+      </figure>
+
+      <p>
+        JavaScript is a powerful, dynamic programming language primarily used in web development.
+        It allows developers to create interactive web pages, handle events, manipulate the DOM,
+        work with APIs, and build both client-side and server-side applications.
+        Modern frameworks like React, Vue, and Node.js heavily rely on JavaScript.
+      </p>
+
+      <h2>1) What is eval in JavaScript and why can it be blocked?</h2>
+      <p>
+        <code>eval()</code> is a built-in function that takes a string and executes it as JavaScript code.
+        For example: <code>eval("2 + 2")</code> returns <code>4</code>. It can also evaluate expressions or even function definitions.
+      </p>
+      <p>
+        <strong>Security risk:</strong> Using <code>eval</code> with untrusted input can allow attackers
+        to run arbitrary code. For this reason, modern browsers may block it via
+        Content Security Policy (CSP), unless <code>'unsafe-eval'</code> is explicitly allowed.
+      </p>
+
+      <table border="1">
+        <caption>Eval Usage Examples</caption>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Result</th>
+            <th>Blocked?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>eval("2 + 2")</td>
+            <td>4</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>eval(userInput)</td>
+            <td>Depends on input</td>
+            <td>Yes if CSP blocks unsafe-eval</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>2) Does JavaScript short-circuit logical expressions?</h2>
+      <p>
+        Yes. Logical operators <code>||</code> (OR) and <code>&amp;&amp;</code> (AND) short-circuit:
+        they stop evaluating as soon as the result is known.
+      </p>
+      <p>
+        Example: in <code>true || doSomething()</code>, the second part is not executed because
+        the OR operator already returns true.
+      </p>
+
+      <pre>
+true || X   --> X is NOT evaluated
+false || X  --> X is evaluated
+true && X   --> X is evaluated
+false && X  --> X is NOT evaluated
+      </pre>
+
+      <h2>3) Can a method accept 1000 arguments without writing 1000 functions?</h2>
+      <p>
+        Yes. JavaScript functions can handle any number of arguments using the
+        <code>arguments</code> object or the ES6 rest parameter syntax (<code>...args</code>).
+        This eliminates the need to write many separate functions.
+      </p>
+
+      <table border="1">
+        <caption>Handling Multiple Arguments</caption>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Example</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rest parameter</td>
+            <td>function f(...args) { }</td>
+            <td>args is an array, can handle 1000+ values</td>
+          </tr>
+          <tr>
+            <td>Arguments object</td>
+            <td>function f() { console.log(arguments); }</td>
+            <td>Older method, array-like object</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4) Does JavaScript support pre and post incrementation?</h2>
+      <p>
+        Yes. JavaScript supports <code>++i</code> (pre-increment) and <code>i++</code> (post-increment).
+      </p>
+      <p>
+        <strong>Pre-increment:</strong> increases the value first, then returns it.<br>
+        <strong>Post-increment:</strong> returns the current value, then increases the variable.
+      </p>
+
+      <table border="1">
+        <caption>Pre vs Post Increment</caption>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Behavior</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>++i</td>
+            <td>Increment first, then return</td>
+            <td>i=1; b=++i; // b=2, i=2</td>
+          </tr>
+          <tr>
+            <td>i++</td>
+            <td>Return first, then increment</td>
+            <td>i=1; a=i++; // a=1, i=2</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </article>
+  </main>
+
+  <aside aria-label="Content disclosure" role="note">
+    <p>
+      <strong>Disclosure:</strong> Content was created using multiple AI tools and edited by a human.
+      I corrected some items, but please read carefully and check sources on the
+      <a href="references.html">References page</a>.
+    </p>
+  </aside>
+
+<footer style="text-align:center; margin-top:2rem; padding: 20px; background-color:#f2f2f2; font-size:14px;">
+  <a href="/index.html" style="text-decoration:none; color:#0066cc; font-weight:bold;">
+    🔙 Back to Welcome Page
+  </a>
+  <p>Last updated: 18 October 2025.</p>
+  <p>&copy; 2025 Charbel Ghaya. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
